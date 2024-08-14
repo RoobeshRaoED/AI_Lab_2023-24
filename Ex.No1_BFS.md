@@ -41,7 +41,7 @@ bfs(visited,graph,'5')
 ```
 ### Output:
 
-![]
+![bfs.png]
 
 ### Result:
 Thus the breadth first search order was found sucessfully.

@@ -49,11 +49,11 @@ symptom(raju,sore_throat).
 ```
 ### Output:
 
-![](Medical%@0Diagnosis_1.png)
+![](MedicalDiagnosis_1.png)
 
-![](Medical%@0Diagnosis_2.png)
+![](Medical%20Diagnosis_2.png)
 
-![](Medical%@0Diagnosis_3.png)
+![](Medical%20Diagnosis_3.png)
 
 ### Result:
 Thus the simple medical diagnosis system was built sucessfully.

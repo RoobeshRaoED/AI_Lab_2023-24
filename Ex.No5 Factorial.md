@@ -22,7 +22,7 @@ factorial(A,B) :-
 ```
 ### Output:
 
-
+![](factorial.png)
 
 ### Result:
 Thus the factorial of given number was found by logic programming. 

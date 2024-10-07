@@ -3,7 +3,7 @@
 14/08/2024
 ## REGISTER NUMBER : 
 212222040136
-### AIM: 
+## AIM: 
 To write a python program to implement Breadth first Search. 
 ## Algorithm:
 1. Start the program

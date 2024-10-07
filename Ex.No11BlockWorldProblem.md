@@ -61,8 +61,11 @@ Step 10 : Obtain the plan for given problem.<br>
 
 ```
 ## Input 
+### blocksworlddomain.pddl:
 
 ![](blocksworlddomain1.png)
+
+### problem.pddl:
 
 ![](blocksworlddomain2.png)
 

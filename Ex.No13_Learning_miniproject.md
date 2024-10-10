@@ -1,12 +1,26 @@
 
-# Ex.No: 10 Learning – Use Supervised Learning  
-## DATE:                                                                            
+# Ex.No: 13 Learning – Use Supervised Learning(Miniproject)
+## DATE:     
+09/10/2024
 ## REGISTER NUMBER : 
-### AIM: 
-To write a program to train the classifier for -----------------.
-###  Algorithm:
-
-### Program:
+212222040136
+## AIM: 
+To write a program to train the classifier for Diebetes.
+##  Algorithm:
+Step 1 : Start the program.
+Step 2 : Import the necessary packages, such as NumPy and Pandas.
+Step 3 : Install and import Gradio for creating the user interface.
+Step 4 : Load the diabetes dataset using Pandas.
+Step 5 : Split the dataset into input features (`x`) and target labels (`y`).
+Step 6 : Split the data into training and testing sets using `train_test_split`.
+Step 7 : Standardize the training and testing data using the `StandardScaler`.
+Step 8 : Instantiate the `MLPClassifier` model with 1000 iterations and train the model on the training data.
+Step 9 : Print the model's accuracy on both the training and testing sets.
+Step 10 : Define a function `diabetes` to take input values for diabetes features and predict the outcome using the trained model.
+Step 11 : Create an interactive Gradio interface for the diabetes detection system with text inputs for each feature and output as either "YES" or "NO" for the prediction.
+Step 12 : Launch the Gradio interface and share it for interaction.
+Step 13 : Stop the program.
+## Program:
 ```
 #import packages
 import numpy as np
@@ -73,8 +87,9 @@ outputs = gr.Textbox()
 app = gr.Interface(fn=diabetes, inputs=['number','number','number','number','number','number','number','number'], outputs=outputs,description="Detection of Diabeties")
 app.launch(share=True)
 ```
-### Output:
+## Output:
 
+![](AI_MiniProject_Diebetes.png)
 
-### Result:
+## Result:
 Thus the system was trained successfully and the prediction was carried out.

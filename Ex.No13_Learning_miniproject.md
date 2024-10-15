@@ -7,89 +7,139 @@
 ## AIM: 
 To write a program to train the classifier for Diebetes.
 ##  Algorithm:
-Step 1 : Start the program.
-Step 2 : Import the necessary packages, such as NumPy and Pandas.
-Step 3 : Install and import Gradio for creating the user interface.
-Step 4 : Load the diabetes dataset using Pandas.
-Step 5 : Split the dataset into input features (`x`) and target labels (`y`).
-Step 6 : Split the data into training and testing sets using `train_test_split`.
-Step 7 : Standardize the training and testing data using the `StandardScaler`.
-Step 8 : Instantiate the `MLPClassifier` model with 1000 iterations and train the model on the training data.
-Step 9 : Print the model's accuracy on both the training and testing sets.
-Step 10 : Define a function `diabetes` to take input values for diabetes features and predict the outcome using the trained model.
-Step 11 : Create an interactive Gradio interface for the diabetes detection system with text inputs for each feature and output as either "YES" or "NO" for the prediction.
-Step 12 : Launch the Gradio interface and share it for interaction.
-Step 13 : Stop the program.
+Step 1 : Start the program.<br>
+Step 2 : Import the necessary packages, such as NumPy and Pandas.<br>
+Step 3 : Install and import Gradio for creating the user interface.<br>
+Step 4 : Load the diabetes dataset using Pandas.<br>
+Step 5 : Split the dataset into input features (`x`) and target labels (`y`).<br>
+Step 6 : Split the data into training and testing sets using `train_test_split`.<br>
+Step 7 : Standardize the training and testing data using the `StandardScaler`.<br>
+Step 8 : Instantiate the `MLPClassifier` model with 1000 iterations and train the model on the training data.<br>
+Step 9 : Print the model's accuracy on both the training and testing sets.<br>
+Step 10 : Define a function `diabetes` to take input values for diabetes features and predict the outcome using the trained model.<br>
+Step 11 : Create an interactive Gradio interface for the diabetes detection system with text inputs for each feature and output as either "YES" or "NO" for the prediction.<br>
+Step 12 : Launch the Gradio interface and share it for interaction.<br>
+Step 13 : Stop the program.<br>
 ## Program:
+Importing Libraries
 ```
-#import packages
-import numpy as np
-import pandas as pd
+import numpy as np 
+import pandas as pd 
+import os
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
 ```
+Reading Data
 ```
-pip install gradio
+df=pd.read_csv("/content/Weather Data.csv")
 ```
-```
-import gradio as gr
-```
-```
-import pandas as pd
-```
-```
-#get the data
-data = pd.read_csv('/content/diabetes.csv')
-data.head()
-```
-```
-print(data.columns)
-```
-```
-x = data.drop(['Outcome'], axis=1)
-y = data['Outcome']
-print(x[:5])
-```
-```
-#split data
-from sklearn.model_selection import train_test_split
+Analyze DataFrames<br>
 
-x_train, x_test, y_train, y_test= train_test_split(x,y)
+1
 ```
+df.head() #first 5 rows
 ```
-#scale data
-from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-x_train_scaled = scaler.fit_transform(x_train)
-x_test_scaled = scaler.fit_transform(x_test)
+2
 ```
+df.columns #getting cols names
 ```
-#instatiate model
-from sklearn.neural_network import MLPClassifier
-model = MLPClassifier(max_iter=1000, alpha=1)
-model.fit(x_train, y_train)
-print("Model Accuracy on training set:", model.score(x_train, y_train))
-print("Model Accuracy on Test Set:", model.score(x_test, y_test))
+3
 ```
+df.shape #(rows,cols)
 ```
-print(data.columns)
+4
 ```
+df.describe() #get description about numeric data
 ```
-#create a function for gradio
-def diabetes(Pregnancies, Glucose, Blood_Pressure, SkinThickness, Insulin, BMI,Diabetes_Pedigree, Age):
-    x = np.array([Pregnancies,Glucose,Blood_Pressure,SkinThickness,Insulin,BMI,Diabetes_Pedigree,Age])
-    prediction = model.predict(x.reshape(1, -1))
-    if(prediction==0):
-      return "NO"
-    else:
-      return "YES"
+5
 ```
+df.info() #we can know from it 1>>Shape , 2>>Data Types , count of Null val in each col
 ```
-outputs = gr.Textbox()
-app = gr.Interface(fn=diabetes, inputs=['number','number','number','number','number','number','number','number'], outputs=outputs,description="Detection of Diabeties")
-app.launch(share=True)
+6
+```
+df.dtypes #another way to get Data Types
+```
+
+Find Nulls values<br>
+
+7
+```
+#Another way to check NULL values
+df.isnull().sum()
+```
+8
+```
+df.notnull().sum()
+```
+9
+```
+df.count() #shows no of non NULL values in each col
+#Another way to check NULL values
+```
+
+Getting Unique values of Weather<br>
+
+10
+```
+df['Weather'].unique()
+```
+
+Getting Unique values of Weather with their Count<br>
+
+11
+```
+df['Weather'].value_counts()
+```
+
+Getting all unique values for each col<br>
+
+12
+```
+df.nunique()
+```
+
+Find all unique values in "Wind speed" Column<br>
+
+13
+```
+df.columns
+```
+14
+```
+df['Wind Speed_km/h'].nunique()
+```
+15
+```
+print ("There are ",df['Wind Speed_km/h'].nunique(), ' in Wind Speed_km/h')
+```
+16
+```
+df['Wind Speed_km/h'].unique()
 ```
 ## Output:
 
-![](AI_MiniProject_Diebetes.png)
+![](AI_MiniProject_1.png)
+
+![](AI_MiniProject_2.png)
+
+![](AI_MiniProject_3.png)
+
+![](AI_MiniProject_4.png)
+
+![](AI_MiniProject_5.png)
+
+![](AI_MiniProject_6.png)
+
+![](AI_MiniProject_7.png)
+
+![](AI_MiniProject_8.png)
+
+![](AI_MiniProject_9.png)
+
+![](AI_MiniProject_10.png)
+
+![](AI_MiniProject_11.png)
 
 ## Result:
 Thus the system was trained successfully and the prediction was carried out.

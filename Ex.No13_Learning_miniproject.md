@@ -5,7 +5,7 @@
 ## REGISTER NUMBER : 
 212222040136
 ## AIM: 
-To write a program to train the classifier for Diebetes.
+To write a program to train the classifier for Weather.
 ##  Algorithm:
 Step 1 : Start the program.<br>
 Step 2 : Import the necessary packages, such as NumPy and Pandas.<br>

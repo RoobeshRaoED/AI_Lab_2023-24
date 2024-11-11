@@ -10,7 +10,7 @@ To write a program to train the classifier for Weather.
 Step 1 : Start the program.<br>
 Step 2 : Import the necessary packages, such as NumPy and Pandas.<br>
 Step 3 : Install and import Gradio for creating the user interface.<br>
-Step 4 : Load the diabetes dataset using Pandas.<br>
+Step 4 : Load the Weather dataset using Pandas.<br>
 Step 5 : Split the dataset into input features (`x`) and target labels (`y`).<br>
 Step 6 : Split the data into training and testing sets using `train_test_split`.<br>
 Step 7 : Standardize the training and testing data using the `StandardScaler`.<br>

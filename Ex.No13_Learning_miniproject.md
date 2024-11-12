@@ -16,10 +16,8 @@ Step 6 : Split the data into training and testing sets using `train_test_split`.
 Step 7 : Standardize the training and testing data using the `StandardScaler`.<br>
 Step 8 : Instantiate the `MLPClassifier` model with 1000 iterations and train the model on the training data.<br>
 Step 9 : Print the model's accuracy on both the training and testing sets.<br>
-Step 10 : Define a function `diabetes` to take input values for diabetes features and predict the outcome using the trained model.<br>
-Step 11 : Create an interactive Gradio interface for the diabetes detection system with text inputs for each feature and output as either "YES" or "NO" for the prediction.<br>
-Step 12 : Launch the Gradio interface and share it for interaction.<br>
-Step 13 : Stop the program.<br>
+Step 10 : Take input values for Weather features and predict the outcome using the trained model.<br>
+Step 11 : Stop the program.<br>
 ## Program:
 Importing Libraries
 ```
@@ -32,7 +30,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 ```
 Reading Data
 ```
-df=pd.read_csv("/content/Weather Data.csv")
+df=pd.read_csv("/content/cWeather Data.csv")
 ```
 Analyze DataFrames<br>
 

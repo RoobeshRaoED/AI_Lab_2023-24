@@ -1,7 +1,7 @@
 
 # Ex.No: 13 Learning – Use Supervised Learning(Miniproject)
 ## DATE:     
-09/10/2024
+4.11.2024
 ## REGISTER NUMBER : 
 212222040136
 ## AIM: 
